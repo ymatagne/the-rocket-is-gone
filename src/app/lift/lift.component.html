@@ -1,0 +1,4 @@
+<div [@rocketTranslateAnimation]="{value: bottom, bottom: bottom}">
+    <img [hidden]="!displayHeader" [style.bottom]="bottom" src="/assets/rocket.png">
+</div>
+<img id="point" *ngFor="let number of numbers,let i=index" [hidden]="displayPoint(i)" [style.bottom]="getBottom(i)" src="/assets/points.png">

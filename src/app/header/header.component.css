@@ -1,0 +1,27 @@
+header{
+    position: absolute;
+    z-index: 1;
+    width: 100%
+}
+h1 { 
+    position: absolute; 
+    font-size: -webkit-xxx-large;
+    color: white;
+    font-family: 'Geostar Fill', cursive;  
+    left: 5%;
+ }
+img{
+    width: 20%;
+    right: 0px;
+    margin-left: 80%;
+}
+ .headerMode{
+    background-color: #1b252f;
+    position: fixed;
+    height: 10%;
+ }
+
+ .headerTitleMode{
+    font-size:xx-large;
+    color: white;
+ }

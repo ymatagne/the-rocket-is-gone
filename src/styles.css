@@ -1,1 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
+body{
+    margin: 0;
+    display: flex;
+}
+article{
+    top: 10%;
+    left: 10%;
+    position: absolute;
+    font-family: 'Geostar Fill', cursive;      
+}

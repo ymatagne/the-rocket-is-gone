@@ -4,5 +4,12 @@
 // The list of which env maps to which file can be found in `.angular-cli.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  slides: [
+    { name: 'home', showHeader: false, showFooter: false },
+    { name: 'about-me', showHeader: true, showFooter: true },
+    { name: 'conquete-history-1', showHeader: true, showFooter: true },
+    { name: 'questions', showHeader: true, showFooter: true },
+    { name: 'end', showHeader: true, showFooter: true }
+  ]
 };

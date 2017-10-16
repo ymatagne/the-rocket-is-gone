@@ -1,0 +1,11 @@
+img{
+    height: 50px;
+    position: absolute;
+    z-index: 2;    
+    right: 3%;
+}
+#point{
+    height: 20px;
+    z-index: 2;  
+    right: 3%;  
+}
