@@ -6,6 +6,13 @@ body{
 article{
     top: 10%;
     left: 10%;
+    width: 90%;
     position: absolute;
     font-family: 'Geostar Fill', cursive;      
+}
+.contentSlide{
+    margin-left:30%;
+}
+.footerSlide{
+    margin-top: 30%;
 }

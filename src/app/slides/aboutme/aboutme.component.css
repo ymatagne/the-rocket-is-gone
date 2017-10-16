@@ -1,0 +1,21 @@
+.cosmonaut{
+    height: 50vh;
+    position: absolute;
+    bottom: 30%;
+}
+.github{
+    height: 7vh;
+}
+.twitter{
+    height: 7vh;
+}
+.norsys{
+    height: 20vh;
+    position: absolute;
+    top: 10%;
+    left: 60%;
+}
+.imageWithText>p{
+    margin-right: 50%;
+    float: right;
+}
