@@ -5,7 +5,6 @@ header{
 }
 h1 { 
     position: absolute; 
-    font-size: -webkit-xxx-large;
     color: white;
     font-family: 'Geostar Fill', cursive;  
     left: 5%;
@@ -22,6 +21,6 @@ img{
  }
 
  .headerTitleMode{
-    font-size:xx-large;
+    font-size:5vh;
     color: white;
  }

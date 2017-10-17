@@ -16,3 +16,15 @@ article{
 .footerSlide{
     margin-top: 30%;
 }
+h1{
+    font-size: 8vh;
+}
+h2{
+    font-size: 4vh;
+}
+h3{
+    font-size: 3vh;
+}
+p{
+    font-size: 2vh;
+}
