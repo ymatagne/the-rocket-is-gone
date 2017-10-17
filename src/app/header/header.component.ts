@@ -9,7 +9,7 @@ import { DisplayService } from '../services/display.service'
 })
 export class HeaderComponent implements OnInit {
 
-  private displayHeader: boolean;
+  public displayHeader: boolean;
   constructor(private displayService: DisplayService) { }
 
   ngOnInit() {

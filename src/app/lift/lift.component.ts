@@ -10,7 +10,7 @@ import { rocketTranslateAnimation } from '../animations/rocketTranslate.animatio
 })
 export class LiftComponent implements OnInit {
 
-  private displayHeader: boolean;
+  public displayHeader: boolean;
 
   public bottom: string = "0%";
 
