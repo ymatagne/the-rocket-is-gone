@@ -1,13 +1,17 @@
 import { Injectable } from '@angular/core';
 import { Subject } from 'rxjs/Subject';
+import { Observable } from 'rxjs/Observable';
+
 import { environment } from '../../environments/environment';
+import 'rxjs/Rx';
+import * as EventSource from 'eventsource';
 
 @Injectable()
 export class DisplayService {
   private displayHeader = new Subject<boolean>();
   private displayFooter = new Subject<boolean>();
   private completion = new Subject<number>();
-
+  public source = new EventSource('/bixi');
   public nbrSlide: number;
   private curentSlide: number;
 
@@ -43,7 +47,7 @@ export class DisplayService {
   getCurrentSlide() {
     return this.curentSlide;
   }
-  
+
   nextSlide() {
     let nextSlide = this.curentSlide + 1;
     if (nextSlide < this.nbrSlide) {
@@ -67,5 +71,4 @@ export class DisplayService {
   calculateCompletion() {
     this.completion.next((this.curentSlide * 90) / (this.nbrSlide - 1));
   }
-
 }

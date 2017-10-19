@@ -10,7 +10,20 @@ import { Router } from '@angular/router';
 })
 export class AppComponent {
 
-  constructor(private router: Router, private displayService: DisplayService) { }
+  constructor(private router: Router, private displayService: DisplayService) {
+    displayService.source.onmessage = message => {
+      let name;
+      console.log(JSON.parse(message.data).move);
+      if (JSON.parse(message.data).move === 'left') {
+        name = displayService.prevSlide();
+      } else if (JSON.parse(message.data).move === 'right') {
+        name = displayService.nextSlide();
+      }
+      if (name) {
+        this.router.navigate([name]);
+      }
+    };
+  }
   @HostListener('document:keydown', ['$event'])
   handleKeyboardEvent(event: KeyboardEvent) {
     let name;
