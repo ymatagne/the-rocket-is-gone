@@ -1,11 +1,11 @@
 img{
-    height: 50px;
+    height: 10vh;
     position: absolute;
     z-index: 2;    
     right: 3%;
 }
 #point{
-    height: 10px;
+    height: 2vh;
     z-index: 2;  
-    right: 3.5%;  
+    right: 4%;  
 }

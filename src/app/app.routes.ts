@@ -4,6 +4,16 @@ import { ConqueteHistory2Component } from './slides/conquete-history-2/conquete-
 import { ConqueteHistory3Component } from './slides/conquete-history-3/conquete-history-3.component';
 import { ConqueteHistory4Component } from './slides/conquete-history-4/conquete-history-4.component';
 import { ConqueteHistory5Component } from './slides/conquete-history-5/conquete-history-5.component';
+import { ConqueteHistory6Component } from './slides/conquete-history-6/conquete-history-6.component';
+import { ConqueteHistory7Component } from './slides/conquete-history-7/conquete-history-7.component';
+import { ConqueteHistory8Component } from './slides/conquete-history-8/conquete-history-8.component';
+import { ConqueteHistory9Component } from './slides/conquete-history-9/conquete-history-9.component';
+import { ConqueteHistory10Component } from './slides/conquete-history-10/conquete-history-10.component';
+import { ConqueteHistory11Component } from './slides/conquete-history-11/conquete-history-11.component';
+import { ConqueteHistory12Component } from './slides/conquete-history-12/conquete-history-12.component';
+import { ConqueteHistory13Component } from './slides/conquete-history-13/conquete-history-13.component';
+import { ConqueteHistory14Component } from './slides/conquete-history-14/conquete-history-14.component';
+import { ConqueteHistory15Component } from './slides/conquete-history-15/conquete-history-15.component';
 import { Container1Component } from './slides/container-1/container-1.component';
 import { Container2Component } from './slides/container-2/container-2.component';
 import { Container3Component } from './slides/container-3/container-3.component';
@@ -49,6 +59,16 @@ export const routes: Routes = [
     { path: 'conquete-history-3', component: ConqueteHistory3Component },
     { path: 'conquete-history-4', component: ConqueteHistory4Component },
     { path: 'conquete-history-5', component: ConqueteHistory5Component },
+    { path: 'conquete-history-6', component: ConqueteHistory5Component },
+    { path: 'conquete-history-7', component: ConqueteHistory7Component },
+    { path: 'conquete-history-8', component: ConqueteHistory8Component },
+    { path: 'conquete-history-9', component: ConqueteHistory9Component },
+    { path: 'conquete-history-10', component: ConqueteHistory10Component },
+    { path: 'conquete-history-11', component: ConqueteHistory11Component },
+    { path: 'conquete-history-12', component: ConqueteHistory12Component },
+    { path: 'conquete-history-13', component: ConqueteHistory13Component },
+    { path: 'conquete-history-14', component: ConqueteHistory14Component },
+    { path: 'conquete-history-15', component: ConqueteHistory15Component },
     { path: 'container-1', component: Container1Component },
     { path: 'container-2', component: Container2Component },
     { path: 'container-3', component: Container3Component },

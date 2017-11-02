@@ -45,6 +45,16 @@ import { Orchestrateur1Component } from './slides/orchestrateur-1/orchestrateur-
 import { Orchestrateur2Component } from './slides/orchestrateur-2/orchestrateur-2.component';
 import { Orchestrateur3Component } from './slides/orchestrateur-3/orchestrateur-3.component';
 import { Orchestrateur4Component } from './slides/orchestrateur-4/orchestrateur-4.component';
+import { ConqueteHistory6Component } from './slides/conquete-history-6/conquete-history-6.component';
+import { ConqueteHistory7Component } from './slides/conquete-history-7/conquete-history-7.component';
+import { ConqueteHistory8Component } from './slides/conquete-history-8/conquete-history-8.component';
+import { ConqueteHistory9Component } from './slides/conquete-history-9/conquete-history-9.component';
+import { ConqueteHistory10Component } from './slides/conquete-history-10/conquete-history-10.component';
+import { ConqueteHistory11Component } from './slides/conquete-history-11/conquete-history-11.component';
+import { ConqueteHistory12Component } from './slides/conquete-history-12/conquete-history-12.component';
+import { ConqueteHistory13Component } from './slides/conquete-history-13/conquete-history-13.component';
+import { ConqueteHistory14Component } from './slides/conquete-history-14/conquete-history-14.component';
+import { ConqueteHistory15Component } from './slides/conquete-history-15/conquete-history-15.component';
 
 @NgModule({
   declarations: [
@@ -86,7 +96,17 @@ import { Orchestrateur4Component } from './slides/orchestrateur-4/orchestrateur-
     Orchestrateur1Component,
     Orchestrateur2Component,
     Orchestrateur3Component,
-    Orchestrateur4Component
+    Orchestrateur4Component,
+    ConqueteHistory6Component,
+    ConqueteHistory7Component,
+    ConqueteHistory8Component,
+    ConqueteHistory9Component,
+    ConqueteHistory10Component,
+    ConqueteHistory11Component,
+    ConqueteHistory12Component,
+    ConqueteHistory13Component,
+    ConqueteHistory14Component,
+    ConqueteHistory15Component
   ],
   imports: [
     BrowserModule,
