@@ -55,6 +55,7 @@ import { ConqueteHistory12Component } from './slides/conquete-history-12/conquet
 import { ConqueteHistory13Component } from './slides/conquete-history-13/conquete-history-13.component';
 import { ConqueteHistory14Component } from './slides/conquete-history-14/conquete-history-14.component';
 import { ConqueteHistory15Component } from './slides/conquete-history-15/conquete-history-15.component';
+import { ConqueteHistory16Component } from './slides/conquete-history-16/conquete-history-16.component';
 
 @NgModule({
   declarations: [
@@ -106,7 +107,8 @@ import { ConqueteHistory15Component } from './slides/conquete-history-15/conquet
     ConqueteHistory12Component,
     ConqueteHistory13Component,
     ConqueteHistory14Component,
-    ConqueteHistory15Component
+    ConqueteHistory15Component,
+    ConqueteHistory16Component
   ],
   imports: [
     BrowserModule,

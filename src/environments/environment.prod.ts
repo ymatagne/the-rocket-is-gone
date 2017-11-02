@@ -18,6 +18,7 @@ export const environment = {
     { name: 'conquete-history-13', showHeader: true, showFooter: true },
     { name: 'conquete-history-14', showHeader: true, showFooter: true },
     { name: 'conquete-history-15', showHeader: true, showFooter: true },
+    { name: 'conquete-history-16', showHeader: true, showFooter: true },
     { name: 'container-1', showHeader: true, showFooter: true },
     { name: 'container-2', showHeader: true, showFooter: true },
     { name: 'container-3', showHeader: true, showFooter: true },
