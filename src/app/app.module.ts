@@ -56,6 +56,17 @@ import { ConqueteHistory13Component } from './slides/conquete-history-13/conquet
 import { ConqueteHistory14Component } from './slides/conquete-history-14/conquete-history-14.component';
 import { ConqueteHistory15Component } from './slides/conquete-history-15/conquete-history-15.component';
 import { ConqueteHistory16Component } from './slides/conquete-history-16/conquete-history-16.component';
+import { Container6Component } from './slides/container-6/container-6.component';
+import { Container7Component } from './slides/container-7/container-7.component';
+import { Container8Component } from './slides/container-8/container-8.component';
+import { Container9Component } from './slides/container-9/container-9.component';
+import { Demo1Component } from './slides/demo-1/demo-1.component';
+import { RktComponent } from './slides/rkt/rkt.component';
+import { Demo2Component } from './slides/demo-2/demo-2.component';
+import { Oci1Component } from './slides/oci-1/oci-1.component';
+import { MobyComponent } from './slides/moby/moby.component';
+import { Container10Component } from './slides/container-10/container-10.component';
+import { Oci2Component } from './slides/oci-2/oci-2.component';
 
 @NgModule({
   declarations: [
@@ -108,7 +119,18 @@ import { ConqueteHistory16Component } from './slides/conquete-history-16/conquet
     ConqueteHistory13Component,
     ConqueteHistory14Component,
     ConqueteHistory15Component,
-    ConqueteHistory16Component
+    ConqueteHistory16Component,
+    Container6Component,
+    Container7Component,
+    Container8Component,
+    Container9Component,
+    Demo1Component,
+    RktComponent,
+    Demo2Component,
+    Oci1Component,
+    MobyComponent,
+    Container10Component,
+    Oci2Component
   ],
   imports: [
     BrowserModule,

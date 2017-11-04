@@ -1,3 +1,12 @@
-<p>
-  container-4 works!
-</p>
+<article>
+  <h2>Container - LXC</h2>
+  <pre>
+    <code>
+      lxc-create -t ubuntu -n mycontainer
+      lxc-start -n mycontainer -d
+      lxc-attach -n mycontainer
+      echo "You are inside !"
+      lxc-stop -n mycontainer
+    </code>
+  </pre>
+</article>

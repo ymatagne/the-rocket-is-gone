@@ -20,6 +20,14 @@ import { Container2Component } from './slides/container-2/container-2.component'
 import { Container3Component } from './slides/container-3/container-3.component';
 import { Container4Component } from './slides/container-4/container-4.component';
 import { Container5Component } from './slides/container-5/container-5.component';
+import { Container6Component } from './slides/container-6/container-6.component';
+import { Container7Component } from './slides/container-7/container-7.component';
+import { Container8Component } from './slides/container-8/container-8.component';
+import { Container9Component } from './slides/container-9/container-9.component';
+import { Container10Component } from './slides/container-10/container-10.component';
+import { Oci1Component } from './slides/oci-1/oci-1.component';
+import { Oci2Component } from './slides/oci-2/oci-2.component';
+import { MobyComponent } from './slides/moby/moby.component';
 import { Return1Component } from './slides/return-1/return-1.component';
 import { Devops1Component } from './slides/devops-1/devops-1.component';
 import { Devops2Component } from './slides/devops-2/devops-2.component';
@@ -74,6 +82,16 @@ export const routes: Routes = [
     { path: 'container-1', component: Container1Component },
     { path: 'container-2', component: Container2Component },
     { path: 'container-3', component: Container3Component },
+    { path: 'container-4', component: Container4Component },
+    { path: 'container-5', component: Container5Component },
+    { path: 'container-6', component: Container6Component },
+    { path: 'container-7', component: Container7Component },
+    { path: 'container-8', component: Container8Component },
+    { path: 'container-9', component: Container9Component },
+    { path: 'container-10', component: Container10Component },
+    { path: 'oci-1', component: Oci1Component },
+    { path: 'oci-2', component: Oci2Component },
+    { path: 'moby', component: MobyComponent },
     { path: 'return-1', component: Return1Component },
     { path: 'devops-1', component: Devops1Component },
     { path: 'devops-2', component: Devops2Component },
@@ -85,8 +103,6 @@ export const routes: Routes = [
     { path: 'agility-3', component: Agility3Component },
     { path: 'agility-4', component: Agility4Component },
     { path: 'agility-5', component: Agility5Component },
-    { path: 'container-4', component: Container4Component },
-    { path: 'container-5', component: Container5Component },
     { path: 'norme-1', component: Norme1Component },
     { path: 'norme-2', component: Norme2Component },
     { path: 'rkt-1', component: Rkt1Component },
