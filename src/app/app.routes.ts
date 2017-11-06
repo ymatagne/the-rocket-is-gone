@@ -48,6 +48,10 @@ import { Orchestrateur1Component } from './slides/orchestrateur-1/orchestrateur-
 import { Orchestrateur2Component } from './slides/orchestrateur-2/orchestrateur-2.component';
 import { Orchestrateur3Component } from './slides/orchestrateur-3/orchestrateur-3.component';
 import { Orchestrateur4Component } from './slides/orchestrateur-4/orchestrateur-4.component';
+import { Orchestrateur5Component } from './slides/orchestrateur-5/orchestrateur-5.component';
+import { Orchestrateur6Component } from './slides/orchestrateur-6/orchestrateur-6.component';
+import { Orchestrateur7Component } from './slides/orchestrateur-7/orchestrateur-7.component';
+import { Orchestrateur8Component } from './slides/orchestrateur-8/orchestrateur-8.component';
 import { HomeComponent } from './slides/home/home.component';
 import { AboutmeComponent } from './slides/aboutme/aboutme.component';
 import { EndComponent } from './slides/end/end.component';
@@ -92,6 +96,14 @@ export const routes: Routes = [
     { path: 'oci-1', component: Oci1Component },
     { path: 'oci-2', component: Oci2Component },
     { path: 'moby', component: MobyComponent },
+    { path: 'orchestrateur-1', component: Orchestrateur1Component },
+    { path: 'orchestrateur-2', component: Orchestrateur2Component },
+    { path: 'orchestrateur-3', component: Orchestrateur3Component },
+    { path: 'orchestrateur-4', component: Orchestrateur4Component },
+    { path: 'orchestrateur-5', component: Orchestrateur5Component },
+    { path: 'orchestrateur-6', component: Orchestrateur6Component },
+    { path: 'orchestrateur-7', component: Orchestrateur7Component },
+    { path: 'orchestrateur-8', component: Orchestrateur8Component },
     { path: 'return-1', component: Return1Component },
     { path: 'devops-1', component: Devops1Component },
     { path: 'devops-2', component: Devops2Component },
@@ -108,10 +120,6 @@ export const routes: Routes = [
     { path: 'rkt-1', component: Rkt1Component },
     { path: 'rkt-2', component: Rkt2Component },
     { path: 'rkt-3', component: Rkt3Component },
-    { path: 'orchestrateur-1', component: Orchestrateur1Component },
-    { path: 'orchestrateur-2', component: Orchestrateur2Component },
-    { path: 'orchestrateur-3', component: Orchestrateur3Component },
-    { path: 'orchestrateur-4', component: Orchestrateur4Component },
     { path: 'demo', component: DemoComponent },
     { path: 'questions', component: QuestionsComponent },
     { path: 'end', component: EndComponent }

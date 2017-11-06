@@ -67,6 +67,11 @@ import { Oci1Component } from './slides/oci-1/oci-1.component';
 import { MobyComponent } from './slides/moby/moby.component';
 import { Container10Component } from './slides/container-10/container-10.component';
 import { Oci2Component } from './slides/oci-2/oci-2.component';
+import { Orchestrateur5Component } from './slides/orchestrateur-5/orchestrateur-5.component';
+import { Orchestrateur6Component } from './slides/orchestrateur-6/orchestrateur-6.component';
+import { Orchestrateur7Component } from './slides/orchestrateur-7/orchestrateur-7.component';
+import { Demo3Component } from './slides/demo-3/demo-3.component';
+import { Orchestrateur8Component } from './slides/orchestrateur-8/orchestrateur-8.component';
 
 @NgModule({
   declarations: [
@@ -130,7 +135,12 @@ import { Oci2Component } from './slides/oci-2/oci-2.component';
     Oci1Component,
     MobyComponent,
     Container10Component,
-    Oci2Component
+    Oci2Component,
+    Orchestrateur5Component,
+    Orchestrateur6Component,
+    Orchestrateur7Component,
+    Demo3Component,
+    Orchestrateur8Component
   ],
   imports: [
     BrowserModule,
