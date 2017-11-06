@@ -36,7 +36,7 @@ export class LiftComponent implements OnInit {
     if (!this.displayHeader) {
       return true;
     } else {
-      if (index < (this.displayService.getCurrentSlide()-1)) {
+      if (index < (this.displayService.getCurrentSlide()-1) && index > (this.displayService.getCurrentSlide()-6)) {
         return false;
       } else {
         return true;

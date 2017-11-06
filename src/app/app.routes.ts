@@ -39,11 +39,7 @@ import { Agility2Component } from './slides/agility-2/agility-2.component';
 import { Agility3Component } from './slides/agility-3/agility-3.component';
 import { Agility4Component } from './slides/agility-4/agility-4.component';
 import { Agility5Component } from './slides/agility-5/agility-5.component';
-import { Norme1Component } from './slides/norme-1/norme-1.component';
-import { Norme2Component } from './slides/norme-2/norme-2.component';
-import { Rkt1Component } from './slides/rkt-1/rkt-1.component';
-import { Rkt2Component } from './slides/rkt-2/rkt-2.component';
-import { Rkt3Component } from './slides/rkt-3/rkt-3.component';
+import { Agility6Component } from './slides/agility-6/agility-6.component';
 import { Orchestrateur1Component } from './slides/orchestrateur-1/orchestrateur-1.component';
 import { Orchestrateur2Component } from './slides/orchestrateur-2/orchestrateur-2.component';
 import { Orchestrateur3Component } from './slides/orchestrateur-3/orchestrateur-3.component';
@@ -55,7 +51,6 @@ import { Orchestrateur8Component } from './slides/orchestrateur-8/orchestrateur-
 import { HomeComponent } from './slides/home/home.component';
 import { AboutmeComponent } from './slides/aboutme/aboutme.component';
 import { EndComponent } from './slides/end/end.component';
-import { DemoComponent } from './slides/demo/demo.component';
 import { QuestionsComponent } from './slides/questions/questions.component';
 
 
@@ -115,12 +110,7 @@ export const routes: Routes = [
     { path: 'agility-3', component: Agility3Component },
     { path: 'agility-4', component: Agility4Component },
     { path: 'agility-5', component: Agility5Component },
-    { path: 'norme-1', component: Norme1Component },
-    { path: 'norme-2', component: Norme2Component },
-    { path: 'rkt-1', component: Rkt1Component },
-    { path: 'rkt-2', component: Rkt2Component },
-    { path: 'rkt-3', component: Rkt3Component },
-    { path: 'demo', component: DemoComponent },
+    { path: 'agility-6', component: Agility6Component },   
     { path: 'questions', component: QuestionsComponent },
     { path: 'end', component: EndComponent }
 

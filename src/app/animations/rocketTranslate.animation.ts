@@ -3,7 +3,7 @@ import { trigger, animate, transition, style, query, stagger } from '@angular/an
 export const rocketTranslateAnimation =
     trigger('rocketTranslateAnimation', [
         transition('* => *', [
-            query('img', style({ transform: 'translateY(+20%)' })),
+            query('img', style({ transform: 'translateY(+15%)' })),
             query('img',
                 stagger('600ms', [
                     animate('900ms', style({ transform: 'translateY(0)' }))

@@ -56,14 +56,7 @@ export const environment = {
     { name: 'agility-3', showHeader: true, showFooter: true },
     { name: 'agility-4', showHeader: true, showFooter: true },
     { name: 'agility-5', showHeader: true, showFooter: true },
-    { name: 'container-4', showHeader: true, showFooter: true },
-    { name: 'container-5', showHeader: true, showFooter: true },
-    { name: 'norme-1', showHeader: true, showFooter: true },
-    { name: 'norme-2', showHeader: true, showFooter: true },
-    { name: 'rkt-1', showHeader: true, showFooter: true },
-    { name: 'rkt-2', showHeader: true, showFooter: true },
-    { name: 'rkt-3', showHeader: true, showFooter: true },
-    { name: 'demo', showHeader: true, showFooter: true },
+    { name: 'agility-6', showHeader: true, showFooter: true },
     { name: 'questions', showHeader: true, showFooter: true },
     { name: 'end', showHeader: true, showFooter: true }
   ]

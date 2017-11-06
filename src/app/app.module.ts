@@ -35,12 +35,6 @@ import { Agility4Component } from './slides/agility-4/agility-4.component';
 import { Agility5Component } from './slides/agility-5/agility-5.component';
 import { Container4Component } from './slides/container-4/container-4.component';
 import { Container5Component } from './slides/container-5/container-5.component';
-import { Norme1Component } from './slides/norme-1/norme-1.component';
-import { Norme2Component } from './slides/norme-2/norme-2.component';
-import { Rkt1Component } from './slides/rkt-1/rkt-1.component';
-import { Rkt2Component } from './slides/rkt-2/rkt-2.component';
-import { Rkt3Component } from './slides/rkt-3/rkt-3.component';
-import { DemoComponent } from './slides/demo/demo.component';
 import { Orchestrateur1Component } from './slides/orchestrateur-1/orchestrateur-1.component';
 import { Orchestrateur2Component } from './slides/orchestrateur-2/orchestrateur-2.component';
 import { Orchestrateur3Component } from './slides/orchestrateur-3/orchestrateur-3.component';
@@ -60,9 +54,6 @@ import { Container6Component } from './slides/container-6/container-6.component'
 import { Container7Component } from './slides/container-7/container-7.component';
 import { Container8Component } from './slides/container-8/container-8.component';
 import { Container9Component } from './slides/container-9/container-9.component';
-import { Demo1Component } from './slides/demo-1/demo-1.component';
-import { RktComponent } from './slides/rkt/rkt.component';
-import { Demo2Component } from './slides/demo-2/demo-2.component';
 import { Oci1Component } from './slides/oci-1/oci-1.component';
 import { MobyComponent } from './slides/moby/moby.component';
 import { Container10Component } from './slides/container-10/container-10.component';
@@ -70,8 +61,8 @@ import { Oci2Component } from './slides/oci-2/oci-2.component';
 import { Orchestrateur5Component } from './slides/orchestrateur-5/orchestrateur-5.component';
 import { Orchestrateur6Component } from './slides/orchestrateur-6/orchestrateur-6.component';
 import { Orchestrateur7Component } from './slides/orchestrateur-7/orchestrateur-7.component';
-import { Demo3Component } from './slides/demo-3/demo-3.component';
 import { Orchestrateur8Component } from './slides/orchestrateur-8/orchestrateur-8.component';
+import { Agility6Component } from './slides/agility-6/agility-6.component';
 
 @NgModule({
   declarations: [
@@ -104,12 +95,6 @@ import { Orchestrateur8Component } from './slides/orchestrateur-8/orchestrateur-
     Agility5Component,
     Container4Component,
     Container5Component,
-    Norme1Component,
-    Norme2Component,
-    Rkt1Component,
-    Rkt2Component,
-    Rkt3Component,
-    DemoComponent,
     Orchestrateur1Component,
     Orchestrateur2Component,
     Orchestrateur3Component,
@@ -129,9 +114,6 @@ import { Orchestrateur8Component } from './slides/orchestrateur-8/orchestrateur-
     Container7Component,
     Container8Component,
     Container9Component,
-    Demo1Component,
-    RktComponent,
-    Demo2Component,
     Oci1Component,
     MobyComponent,
     Container10Component,
@@ -139,8 +121,8 @@ import { Orchestrateur8Component } from './slides/orchestrateur-8/orchestrateur-
     Orchestrateur5Component,
     Orchestrateur6Component,
     Orchestrateur7Component,
-    Demo3Component,
-    Orchestrateur8Component
+    Orchestrateur8Component,
+    Agility6Component,
   ],
   imports: [
     BrowserModule,
