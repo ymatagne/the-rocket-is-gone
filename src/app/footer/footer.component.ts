@@ -14,7 +14,7 @@ export class FooterComponent implements OnInit {
   constructor(private displayService: DisplayService) { }
   
   ngOnInit() {
-    this.displayService.showHeader().subscribe(value => this.displayHeader = value);    
+    this.displayService.showFooter().subscribe(value => this.displayHeader = value);    
   }
 
 }

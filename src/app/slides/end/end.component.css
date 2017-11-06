@@ -3,3 +3,17 @@
     position: absolute;
     bottom: 30%;
 }
+#bg {
+    position: fixed; 
+    height: 100%;
+  }
+  #bg img {
+    top: 0; 
+    left: 0; 
+    right: 0; 
+    bottom: 0; 
+    margin: auto; 
+  }
+  article{
+    z-index: 3;
+  }

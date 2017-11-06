@@ -58,6 +58,6 @@ export const environment = {
     { name: 'agility-5', showHeader: true, showFooter: true },
     { name: 'agility-6', showHeader: true, showFooter: true },
     { name: 'questions', showHeader: true, showFooter: true },
-    { name: 'end', showHeader: true, showFooter: true }
+    { name: 'end', showHeader: false, showFooter: true }
   ]
 };
