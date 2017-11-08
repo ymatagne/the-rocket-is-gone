@@ -30,9 +30,34 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## Demo 1
 Using Docker
+ng build --prod --build-optimizer --aot
+docker build -t "mypresentation" .
+docker run -d -p 80:80 --name "toto" mypresentation
+docker exec -it mypresentation bash
+docker ps
+docker stop toto
+docker rm  mypresentation
 
 ## Demo 2
-Using CoreOs
+Using Rkt
+cd /tmp/rkt
+vagrant up
+vagrant ssh
+cd /tmp/
+wget https://github.com/containers/build/releases/download/v0.4.0/acbuild-v0.4.0.tar.gz
+./acbuild begin
+./acbuild set-name example.com/nginx
+./acbuild dependency add quay.io/coreos/alpine-sh
+./acbuild run -- apk update
+./acbuild run -- apk add nginx
+./acbuild port add http tcp 80
+./acbuild mount add html /usr/share/nginx/html
+./acbuild set-exec -- /usr/sbin/nginx -g "daemon off;"
+./acbuild write nginx.aci
+./acbuild end
+mkdir test
+echo "Hello, world!" > test/index.html
+systemd-run rkt run --insecure-options=image /home/core/acbuild-v0.4.0/nginx.aci --volume html,kind=host,source=/home/core/acbuild-v0.4.0/test --port=http:8081
 
 ## Demo 3
 Using SWARM
