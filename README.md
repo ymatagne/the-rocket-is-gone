@@ -28,23 +28,39 @@ Before running the tests make sure you are serving the app via `ng serve`.
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
 
 
+## For the demo
+
+### Install Vagrant
+
+### Up VM
+
+vagrant up
+
+### Install Docker
+
+vagrant ssh
+
 ## Demo 1
 Using Docker
-ng build --prod --build-optimizer --aot
+sudo su -
+cd /home/vagrant/docker
 docker build -t "mypresentation" .
-docker run -d -p 80:80 --name "toto" mypresentation
-docker exec -it mypresentation bash
+docker run -d -p 10080:80 --name "toto" mypresentation
+
+goto http://localhost:10080/home
+
+docker exec -it toto sh
 docker ps
 docker stop toto
-docker rm  mypresentation
+docker rm toto
+docker rmi  mypresentation
 
 ## Demo 2
 Using Rkt
-cd /tmp/rkt
-vagrant up
-vagrant ssh
-cd /tmp/
-wget https://github.com/containers/build/releases/download/v0.4.0/acbuild-v0.4.0.tar.gz
+buildah containers
+container=$(buildah from fedora)
+buildah run $container -- dnf -y install java
+
 ./acbuild begin
 ./acbuild set-name example.com/nginx
 ./acbuild dependency add quay.io/coreos/alpine-sh
