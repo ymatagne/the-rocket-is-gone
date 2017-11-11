@@ -69,6 +69,7 @@ import { Os3Component } from './slides/os-3/os-3.component';
 import { Tools1Component } from './slides/tools-1/tools-1.component';
 import { Tools2Component } from './slides/tools-2/tools-2.component';
 import { Tools3Component } from './slides/tools-3/tools-3.component';
+import { Tools4Component } from './slides/tools-4/tools-4.component';
 
 @NgModule({
   declarations: [
@@ -135,6 +136,7 @@ import { Tools3Component } from './slides/tools-3/tools-3.component';
     Tools1Component,
     Tools2Component,
     Tools3Component,
+    Tools4Component,
   ],
   imports: [
     BrowserModule,

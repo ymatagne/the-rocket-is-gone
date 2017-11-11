@@ -54,6 +54,7 @@ import { Os3Component } from './slides/os-3/os-3.component';
 import { Tools1Component } from './slides/tools-1/tools-1.component';
 import { Tools2Component } from './slides/tools-2/tools-2.component';
 import { Tools3Component } from './slides/tools-3/tools-3.component';
+import { Tools4Component } from './slides/tools-4/tools-4.component';
 import { HomeComponent } from './slides/home/home.component';
 import { AboutmeComponent } from './slides/aboutme/aboutme.component';
 import { EndComponent } from './slides/end/end.component';
@@ -110,7 +111,8 @@ export const routes: Routes = [
     { path: 'os-3', component: Os3Component },
     { path: 'tools-1', component: Tools1Component },
     { path: 'tools-2', component: Tools2Component },
-    { path: 'tools-3', component: Tools3Component },    
+    { path: 'tools-3', component: Tools3Component },  
+    { path: 'tools-4', component: Tools4Component },   
     { path: 'return-1', component: Return1Component },
     { path: 'devops-1', component: Devops1Component },
     { path: 'devops-2', component: Devops2Component },

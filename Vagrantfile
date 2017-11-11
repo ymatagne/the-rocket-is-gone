@@ -71,7 +71,7 @@ Vagrant.configure("2") do |config|
   config.vm.box = "fedora/26-cloud-base"
   config.vm.box_version = "20170705"
   
-  #config.vm.network "public_network"
+  config.vm.network "public_network", bridge: "en1"
 
   for i in 10080..10100
     config.vm.network :forwarded_port, guest: i, host: i

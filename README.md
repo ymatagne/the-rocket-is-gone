@@ -36,14 +36,11 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 vagrant up
 
-### Install Docker
-
 vagrant ssh
 
-## Demo 1
-Using Docker
+## Demo Docker
 sudo su -
-cd /home/vagrant/docker
+cd /tmp/data
 docker build -t "mypresentation" .
 docker run -d -p 10080:80 --name "toto" mypresentation
 
@@ -53,21 +50,29 @@ docker exec -it toto sh
 docker ps
 docker stop toto
 docker rm toto
-docker rmi  mypresentation
 
-## Demo 2
+## Demo RKT
+Unsing RKT with docker
+docker images
+docker save --output mypresentation.tar mypresentation
+rkt --insecure-options=image run mypresentation.tar --port=http:10085
+
+
+
+## Create ACI container
 Using Rkt
 acbuild begin
-acbuild set-name example.com/nginx
+acbuild set-name mypresentation
 acbuild dependency add quay.io/coreos/alpine-sh
 acbuild run -- apk update
 acbuild run -- apk add nginx
 acbuild port add http tcp 80
-acbuild mount add html /usr/share/nginx/html
+acbuild copy-to-dir dist/* /usr/share/nginx/html
 acbuild set-exec -- /usr/sbin/nginx -g "daemon off;"
-acbuild write nginx.aci
+acbuild write mypresentation.aci
 acbuild end
-
+ls -lai
+rkt --insecure-options=image run /tmp/data/mypresentation.aci --port=http:10085
 
 ## Build OCI direcly
 buildah build-using-dockerfile .

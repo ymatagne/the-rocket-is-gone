@@ -46,6 +46,7 @@ export const environment = {
     { name: 'tools-1', showHeader: true, showFooter: true },
     { name: 'tools-2', showHeader: true, showFooter: true },
     { name: 'tools-3', showHeader: true, showFooter: true },
+    { name: 'tools-4', showHeader: true, showFooter: true },
     { name: 'return-1', showHeader: true, showFooter: true },
     { name: 'devops-1', showHeader: true, showFooter: true },
     { name: 'devops-2', showHeader: true, showFooter: true },
