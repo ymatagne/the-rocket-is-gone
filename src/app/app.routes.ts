@@ -48,6 +48,12 @@ import { Orchestrateur5Component } from './slides/orchestrateur-5/orchestrateur-
 import { Orchestrateur6Component } from './slides/orchestrateur-6/orchestrateur-6.component';
 import { Orchestrateur7Component } from './slides/orchestrateur-7/orchestrateur-7.component';
 import { Orchestrateur8Component } from './slides/orchestrateur-8/orchestrateur-8.component';
+import { Os1Component } from './slides/os-1/os-1.component';
+import { Os2Component } from './slides/os-2/os-2.component';
+import { Os3Component } from './slides/os-3/os-3.component';
+import { Tools1Component } from './slides/tools-1/tools-1.component';
+import { Tools2Component } from './slides/tools-2/tools-2.component';
+import { Tools3Component } from './slides/tools-3/tools-3.component';
 import { HomeComponent } from './slides/home/home.component';
 import { AboutmeComponent } from './slides/aboutme/aboutme.component';
 import { EndComponent } from './slides/end/end.component';
@@ -99,6 +105,12 @@ export const routes: Routes = [
     { path: 'orchestrateur-6', component: Orchestrateur6Component },
     { path: 'orchestrateur-7', component: Orchestrateur7Component },
     { path: 'orchestrateur-8', component: Orchestrateur8Component },
+    { path: 'os-1', component: Os1Component },
+    { path: 'os-2', component: Os2Component },
+    { path: 'os-3', component: Os3Component },
+    { path: 'tools-1', component: Tools1Component },
+    { path: 'tools-2', component: Tools2Component },
+    { path: 'tools-3', component: Tools3Component },    
     { path: 'return-1', component: Return1Component },
     { path: 'devops-1', component: Devops1Component },
     { path: 'devops-2', component: Devops2Component },

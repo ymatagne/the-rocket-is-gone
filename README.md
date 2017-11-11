@@ -57,9 +57,26 @@ docker rmi  mypresentation
 
 ## Demo 2
 Using Rkt
+acbuild begin
+acbuild set-name example.com/nginx
+acbuild dependency add quay.io/coreos/alpine-sh
+acbuild run -- apk update
+acbuild run -- apk add nginx
+acbuild port add http tcp 80
+acbuild mount add html /usr/share/nginx/html
+acbuild set-exec -- /usr/sbin/nginx -g "daemon off;"
+acbuild write nginx.aci
+acbuild end
+
+
+## Build OCI direcly
+buildah build-using-dockerfile .
 buildah containers
-container=$(buildah from fedora)
-buildah run $container -- dnf -y install java
+buildah images
+
+# Cleanup
+buildah unmount $container
+buildah rm $container
 
 ./acbuild begin
 ./acbuild set-name example.com/nginx

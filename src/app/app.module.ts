@@ -63,6 +63,12 @@ import { Orchestrateur6Component } from './slides/orchestrateur-6/orchestrateur-
 import { Orchestrateur7Component } from './slides/orchestrateur-7/orchestrateur-7.component';
 import { Orchestrateur8Component } from './slides/orchestrateur-8/orchestrateur-8.component';
 import { Agility6Component } from './slides/agility-6/agility-6.component';
+import { Os1Component } from './slides/os-1/os-1.component';
+import { Os2Component } from './slides/os-2/os-2.component';
+import { Os3Component } from './slides/os-3/os-3.component';
+import { Tools1Component } from './slides/tools-1/tools-1.component';
+import { Tools2Component } from './slides/tools-2/tools-2.component';
+import { Tools3Component } from './slides/tools-3/tools-3.component';
 
 @NgModule({
   declarations: [
@@ -123,6 +129,12 @@ import { Agility6Component } from './slides/agility-6/agility-6.component';
     Orchestrateur7Component,
     Orchestrateur8Component,
     Agility6Component,
+    Os1Component,
+    Os2Component,
+    Os3Component,
+    Tools1Component,
+    Tools2Component,
+    Tools3Component,
   ],
   imports: [
     BrowserModule,

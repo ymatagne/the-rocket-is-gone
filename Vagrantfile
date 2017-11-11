@@ -21,13 +21,14 @@ dnf -y install \
         go-md2man \
         runc \
         skopeo-containers
-mkdir ~/buildah
-cd ~/buildah
+mkdir buildah
+cd buildah
 export GOPATH=`pwd`
 git clone https://github.com/projectatomic/buildah ./src/github.com/projectatomic/buildah
 cd ./src/github.com/projectatomic/buildah
 make
 make install
+echo "alias buildah=/usr/local/bin/buildah" >> /root/.bashrc
 date > /etc/vagrant_provisioned_at
 SCRIPT
 
@@ -43,6 +44,16 @@ systemctl enable docker
 date > /etc/vagrant_provisioned_at
 SCRIPT
 
+$acbuild = <<SCRIPT
+echo Install acbuild
+git clone https://github.com/containers/build acbuild
+cd acbuild
+./build
+echo "export ACBUILD_BIN_DIR=/home/vagrant/acbuild/bin/" >> /root/.bashrc
+echo "export PATH=$PATH:$ACBUILD_BIN_DIR:/home/vagrant/acbuild/bin/" >> /root/.bashrc
+date > /etc/vagrant_provisioned_at
+SCRIPT
+
 $rkt = <<SCRIPT
 echo Install rkt
 sudo dnf -y install rkt
@@ -55,6 +66,7 @@ rm -f /etc/resolv.conf
 echo "nameserver 8.8.8.8" >> /etc/resolv.conf
 date > /etc/vagrant_provisioned_at
 SCRIPT
+
 Vagrant.configure("2") do |config|
   config.vm.box = "fedora/26-cloud-base"
   config.vm.box_version = "20170705"
@@ -74,9 +86,10 @@ Vagrant.configure("2") do |config|
   config.vm.provision "shell", inline: $docker
   config.vm.provision "shell", inline: $rkt
   config.vm.provision "shell", inline: $dns
+  config.vm.provision "shell", inline: $acbuild
 
-  config.vm.provision "file", source: "dist", destination: "/home/vagrant/docker/dist"
-  config.vm.provision "file", source: "nginx", destination: "/home/vagrant/docker/nginx"
-  config.vm.provision "file", source: "Dockerfile", destination: "/home/vagrant/docker/Dockerfile"
+  config.vm.provision "file", source: "dist", destination: "/tmp/data/dist"
+  config.vm.provision "file", source: "nginx", destination: "/tmp/data/nginx"
+  config.vm.provision "file", source: "Dockerfile", destination: "/tmp/data/Dockerfile"
   
 end
