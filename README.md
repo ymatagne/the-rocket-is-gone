@@ -53,11 +53,22 @@ docker rm toto
 
 ## Demo RKT
 Unsing RKT with docker
-docker images
-docker save --output mypresentation.tar mypresentation
-rkt --insecure-options=image run mypresentation.tar --port=http:10085
+ rkt run --insecure-options=image --port=80-tcp:10083 docker://nginx
+ 
 
+## Demo SWARM
+docker swarm init --advertise-addr 192.168.0.19
+docker info
+docker node ls
+docker service create --replicas 3 --name mypresentations --publish 10082:80 mypresentation 
+docker service ls
+docker service inspect --pretty mypresentations
+docker service ps mypresentations
+docker ps
+docker stop 1 docker
+docker stop 2 docker
 
+docker service rm mypresentations
 
 ## Create ACI container
 Using Rkt
