@@ -28,85 +28,180 @@ Before running the tests make sure you are serving the app via `ng serve`.
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
 
 
-## For the demo
+## Demo Time
 
 ### Install Vagrant
 
-### Up VM
+Go to https://www.vagrantup.com/
 
-vagrant up
+### Install Demo repository
 
-vagrant ssh
+`git clone https://github.com/ymatagne/coreos-vagrant`
 
-## Demo Docker
-sudo su -
-cd /tmp/data
-docker build -t "mypresentation" .
-docker run -d -p 10080:80 --name "toto" mypresentation
+`cd coreos-vagrant`
+
+`vagrant up`
+
+`vagrant status`
+
+`vagrant ssh core-01`
+
+`exit`
+
+### Demo Time
+
+#### I've not data directory !
+
+`exit`
+
+`vagrant provision`
+
+`vagrant ssh core-01`
+
+#### How to work coreos
+
+`vi user-data.sample`
+
+Explain how CoreOs Work with this configuration file
+
+#### How to build Docker container
+
+`vagrant ssh core-01`
+
+`sudo su -`
+
+`cd /tmp/data`
+
+`docker build -t "mypresentation" .`
+
+`docker run -d -p 10080:80 --name "toto" mypresentation`
+
+`docker exec -it toto sh`
+
+`docker stats`
+
+`docker ps`
 
 goto http://localhost:10080/home
 
-docker exec -it toto sh
-docker ps
-docker stop toto
-docker rm toto
+`rkt list`
 
-## Demo RKT
-Unsing RKT with docker
- rkt run --insecure-options=image --port=80-tcp:10083 docker://nginx
+`docker stop toto`
+
+`docker rm toto`
+
+#### How to use rkt with Docker container
+
+`sudo systemd-run rkt run --insecure-options=image --port=80-tcp:10083 docker://nginx`
  
+ goto http://172.17.8.101:10083/
 
-## Demo SWARM
-docker swarm init --advertise-addr 192.168.0.19
-docker info
-docker node ls
-docker service create --replicas 3 --name mypresentations --publish 10082:80 mypresentation 
-docker service ls
-docker service inspect --pretty mypresentations
-docker service ps mypresentations
-docker ps
-docker stop 1 docker
-docker stop 2 docker
+`rkt list`
 
-docker service rm mypresentations
+`rkt image list`
 
-## Create ACI container
-Using Rkt
-acbuild begin
-acbuild set-name mypresentation
-acbuild dependency add quay.io/coreos/alpine-sh
-acbuild run -- apk update
-acbuild run -- apk add nginx
-acbuild port add http tcp 80
-acbuild copy-to-dir dist/* /usr/share/nginx/html
-acbuild set-exec -- /usr/sbin/nginx -g "daemon off;"
-acbuild write mypresentation.aci
-acbuild end
-ls -lai
-rkt --insecure-options=image run /tmp/data/mypresentation.aci --port=http:10085
+`sudo rkt enter 22a02e9b`
 
-## Build OCI direcly
-buildah build-using-dockerfile .
-buildah containers
-buildah images
+`sudo rkt stop 22a02e9b`
 
-# Cleanup
-buildah unmount $container
-buildah rm $container
+`sudo rkt rm 22a02e9b`
 
-./acbuild begin
-./acbuild set-name example.com/nginx
-./acbuild dependency add quay.io/coreos/alpine-sh
-./acbuild run -- apk update
-./acbuild run -- apk add nginx
-./acbuild port add http tcp 80
-./acbuild mount add html /usr/share/nginx/html
-./acbuild set-exec -- /usr/sbin/nginx -g "daemon off;"
-./acbuild write nginx.aci
-./acbuild end
-mkdir test
-echo "Hello, world!" > test/index.html
-systemd-run rkt run --insecure-options=image /home/core/acbuild-v0.4.0/nginx.aci --volume html,kind=host,source=/home/core/acbuild-v0.4.0/test --port=http:8081
 
-## Demo 3
-Using SWARM
+#### How to build ACI/OCI images
+
+`git clone https://github.com/containers/build acbuild`
+
+`cd acbuild`
+
+`./build-docker`
+
+Avantage container : For install or deploy applications, docker everywhere
+
+`cd /tmp/data/`
+
+`sudo sh build-aci.sh`
+
+`ls -lai`
+
+`sudo systemd-run rkt run --insecure-options=image --port=http:10084 /tmp/data/mypresentationaci.aci`
+
+`docker images`
+
+
+#### How to install swarm
+
+`ifconfig`
+
+`docker swarm init --advertise-addr 172.17.8.101`
+
+`vagrant ssh core-02`
+
+`docker swarm join --token SWMTKN-1-3yiae01mt7w1bbnz1zza1qnu8s08rb9tu4xemf5evza1zjj073-1xhexobuq8ek0gh8slcoht1b7 172.17.8.101:2377`
+
+`vagrant ssh core-03`
+
+`docker swarm join --token SWMTKN-1-3yiae01mt7w1bbnz1zza1qnu8s08rb9tu4xemf5evza1zjj073-1xhexobuq8ek0gh8slcoht1b7 172.17.8.101:2377`
+
+`docker info`
+
+Swarm is active and contains 3 nodes
+
+`docker node ls`
+
+
+#### How to deploy new services in swarm clusters
+
+`docker service create --replicas 5 --name mypresentations --publish 10082:80 ymatagne/rocketisgone:latest`
+
+`docker service ls`
+
+`docker service inspect --pretty mypresentations`
+
+`docker service ps mypresentations`
+
+goto http://172.17.8.101:10082/
+
+goto core-02 and core-03 : You constat that containers are started
+
+goto core-01 and stop container
+
+`docker stop ls`
+
+#### How to monitor your cluster
+
+create this files :
+
+`vim compose.yml`
+
+<pre>
+version: "3"
+services:
+  dashboard:
+    image: charypar/swarm-dashboard
+    volumes:
+    - "/var/run/docker.sock:/var/run/docker.sock"
+    ports:
+    - 8080:8080
+    environment:
+      PORT: 8080
+    deploy:
+      replicas: 1
+      placement:
+        constraints:
+          - node.role == manager
+</pre>
+
+`docker stack deploy -c compose.yml svc`
+
+`docker service ls`
+
+goto http://172.17.8.101:8080/
+
+stop one os
+
+`docker service create --name portainer --publish 9000:9000 --replicas=1 --constraint 'node.role == manager' --mount type=bind,src=//var/run/docker.sock,dst=/var/run/docker.sock portainer/portainer -H unix:///var/run/docker.sock`
+
+goto http://172.17.8.101:9000/
+
+
+Deploy new service, all things is news... it so fast.
