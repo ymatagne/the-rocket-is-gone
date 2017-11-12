@@ -24,12 +24,12 @@ export class AppComponent {
       }
     };
   }
-  @HostListener('document:keydown', ['$event'])
+  @HostListener('window:keydown', ['$event'])  
   handleKeyboardEvent(event: KeyboardEvent) {
     let name;
-    if (event.key === "ArrowLeft" || event.key === "ArrowUp") {
+    if (event.keyCode === 37 || event.keyCode === 38) {
       name = this.displayService.prevSlide();
-    } else if (event.key === "ArrowRight" || event.key === "ArrowDown") {
+    } else if (event.keyCode === 39 || event.keyCode === 40) {
       name = this.displayService.nextSlide();
     }
     if (name) {
