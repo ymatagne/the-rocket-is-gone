@@ -51,6 +51,12 @@ import { Orchestrateur8Component } from './slides/orchestrateur-8/orchestrateur-
 import { Os1Component } from './slides/os-1/os-1.component';
 import { Os2Component } from './slides/os-2/os-2.component';
 import { Os3Component } from './slides/os-3/os-3.component';
+import { Demo1Component } from './slides/demo-1/demo-1.component';
+import { Demo2Component } from './slides/demo-2/demo-2.component';
+import { Demo3Component } from './slides/demo-3/demo-3.component';
+import { Demo4Component } from './slides/demo-4/demo-4.component';
+import { Demo5Component } from './slides/demo-5/demo-5.component';
+import { Demo6Component } from './slides/demo-6/demo-6.component';
 import { Tools1Component } from './slides/tools-1/tools-1.component';
 import { Tools2Component } from './slides/tools-2/tools-2.component';
 import { Tools3Component } from './slides/tools-3/tools-3.component';
@@ -90,11 +96,9 @@ export const routes: Routes = [
     { path: 'container-3', component: Container3Component },
     { path: 'container-4', component: Container4Component },
     { path: 'container-5', component: Container5Component },
-    { path: 'container-6', component: Container6Component },
     { path: 'container-7', component: Container7Component },
     { path: 'container-8', component: Container8Component },
     { path: 'container-9', component: Container9Component },
-    { path: 'container-10', component: Container10Component },
     { path: 'oci-1', component: Oci1Component },
     { path: 'oci-2', component: Oci2Component },
     { path: 'moby', component: MobyComponent },
@@ -105,14 +109,20 @@ export const routes: Routes = [
     { path: 'orchestrateur-5', component: Orchestrateur5Component },
     { path: 'orchestrateur-6', component: Orchestrateur6Component },
     { path: 'orchestrateur-7', component: Orchestrateur7Component },
-    { path: 'orchestrateur-8', component: Orchestrateur8Component },
     { path: 'os-1', component: Os1Component },
     { path: 'os-2', component: Os2Component },
     { path: 'os-3', component: Os3Component },
     { path: 'tools-1', component: Tools1Component },
     { path: 'tools-2', component: Tools2Component },
     { path: 'tools-3', component: Tools3Component },  
-    { path: 'tools-4', component: Tools4Component },   
+    { path: 'tools-4', component: Tools4Component }, 
+    { path: 'orchestrateur-8', component: Orchestrateur8Component },
+    { path: 'demo-1', component: Demo1Component },
+    { path: 'demo-2', component: Demo2Component },
+    { path: 'demo-3', component: Demo3Component },
+    { path: 'demo-4', component: Demo4Component },
+    { path: 'demo-5', component: Demo5Component },
+    { path: 'demo-6', component: Demo6Component },
     { path: 'return-1', component: Return1Component },
     { path: 'devops-1', component: Devops1Component },
     { path: 'devops-2', component: Devops2Component },

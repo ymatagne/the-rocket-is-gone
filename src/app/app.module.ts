@@ -70,6 +70,12 @@ import { Tools1Component } from './slides/tools-1/tools-1.component';
 import { Tools2Component } from './slides/tools-2/tools-2.component';
 import { Tools3Component } from './slides/tools-3/tools-3.component';
 import { Tools4Component } from './slides/tools-4/tools-4.component';
+import { Demo1Component } from './slides/demo-1/demo-1.component';
+import { Demo2Component } from './slides/demo-2/demo-2.component';
+import { Demo3Component } from './slides/demo-3/demo-3.component';
+import { Demo4Component } from './slides/demo-4/demo-4.component';
+import { Demo5Component } from './slides/demo-5/demo-5.component';
+import { Demo6Component } from './slides/demo-6/demo-6.component';
 
 @NgModule({
   declarations: [
@@ -137,6 +143,12 @@ import { Tools4Component } from './slides/tools-4/tools-4.component';
     Tools2Component,
     Tools3Component,
     Tools4Component,
+    Demo1Component,
+    Demo2Component,
+    Demo3Component,
+    Demo4Component,
+    Demo5Component,
+    Demo6Component,
   ],
   imports: [
     BrowserModule,
